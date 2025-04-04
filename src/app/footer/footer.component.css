@@ -1,0 +1,13 @@
+ul li a {
+    font-weight: 500;
+}
+
+.footer-content>div {
+    width: 100%
+}
+
+@media(min-width:992px) {
+    .footer-content>div {
+        width: calc(100% / 3);
+    }
+}

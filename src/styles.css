@@ -1,1 +1,261 @@
-/* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+body {
+    font-family: 'Inter', sans-serif;
+    padding: 0;
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+}
+
+.bg-section {
+    background-color: rgba(189, 206, 49, 0.1);
+}
+
+.mt-150 {
+    margin-top: 150px;
+}
+
+.mt-100 {
+    margin-top: 100px;
+}
+
+.mb-50 {
+    margin-bottom: 50px;
+}
+
+.mb-100 {
+    margin-bottom: 100px;
+}
+
+.p-section {
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+
+.pt-100 {
+    padding-top: 100px;
+}
+
+.logo {
+    width: 250px;
+    height: 120px;
+}
+
+.logo img {
+    width: 100%;
+    height: 100%;
+}
+
+.search {
+    height: 40px;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.search input {
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+    border: none;
+    border-bottom: 1px solid #777;
+    transition: 0.3s;
+}
+
+.search i {
+    position: absolute;
+    left: calc(100% - 18px);
+    font-size: 18px;
+    color: #777;
+    transition: 0.3s;
+}
+
+.search input:focus {
+    outline: none;
+    border-color: #BDCE31;
+}
+
+.search input:focus+i {
+    color: #BDCE31;
+}
+
+.my-btn {
+    display: inline-block;
+    width: fit-content;
+    padding: 10px 20px;
+    border-radius: 30px;
+    color: #000000;
+    font-weight: 500;
+}
+
+.my-bg {
+    background-color: #BDCE31;
+}
+
+.my-title {
+    font-weight: 700;
+    font-size: 64px;
+    margin: 0 0 20px 0;
+}
+
+.section-image {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+}
+
+.section-image .image {
+    width: 500px;
+    height: 300px;
+}
+
+.section-image .image img {
+    width: 100%;
+    height: 100%;
+}
+
+.section-image .description {
+    width: 50%;
+}
+
+.section-image p {
+    font-weight: 400;
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.section-text {
+    display: flex;
+    gap: 20px;
+}
+
+.section-text .box {
+    flex: 1;
+    padding: 20px;
+    background-color: rgba(189, 206, 49, 0.3);
+    border-radius: 10px;
+}
+
+.section-text .box p {
+    font-weight: 400;
+    font-size: 18px;
+    height: 300px;
+    margin: 0 0 20px;
+    border-bottom: 1px solid #000000;
+}
+
+.page-title {
+    text-align: center;
+    padding: 0 20px;
+    position: relative;
+}
+
+.page-title h1 {
+    font-weight: 800;
+    font-size: 64px;
+}
+
+.page-title p {
+    font-weight: 500;
+    font-size: 30px;
+}
+
+.page-title::after {
+    content: "";
+    width: 20%;
+    height: 4px;
+    background-color: #BDCE31;
+    position: absolute;
+    top: 120%;
+    left: 40%;
+}
+
+.sub-title {
+    position: relative;
+}
+
+.sub-title span {
+    font-weight: 700;
+    font-size: 24px;
+}
+
+.sub-title h2 {
+    font-weight: 700;
+    font-size: 30px;
+    margin-bottom: 50px;
+}
+
+.sub-title p {
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 400;
+}
+
+.sub-title::after {
+    content: "";
+    width: 100%;
+    height: 4px;
+    background-color: #BDCE31;
+    position: absolute;
+    left: 0;
+    top: 130%;
+}
+
+.second-sub-title {
+    font-weight: 700;
+    font-size: 30px;
+    position: relative;
+}
+
+.second-sub-title::after {
+    content: "";
+    width: 100px;
+    height: 7px;
+    background-color: #BDCE31;
+    position: absolute;
+    left: 0;
+    top: 130%;
+}
+
+.text {
+    font-weight: 400;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+}
+
+@media(max-width:1000px) {
+    .section-text {
+        flex-direction: column;
+    }
+
+    .section-text .box p {
+        height: fit-content;
+        border: none;
+    }
+
+    .section-text .vr {
+        display: none;
+    }
+}
+
+@media(max-width:992px) {
+    .section-image {
+        flex-direction: column;
+    }
+
+    .section-image .vr {
+        display: none;
+    }
+
+    .section-image .description,
+    .section-image .image {
+        text-align: center;
+        width: 100%;
+    }
+}
