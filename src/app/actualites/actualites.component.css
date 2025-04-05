@@ -1,0 +1,10 @@
+.actualites h2 {
+    font-weight: 700;
+    font-size: 64px;
+    margin-bottom: 50px;
+}
+
+.actualites .box img {
+    width: 400px;
+    height: 200px;
+}
