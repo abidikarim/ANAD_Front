@@ -7,6 +7,8 @@ import { AUTComponent } from './aut/aut.component';
 import { SignalementDopageComponent } from './signalement-dopage/signalement-dopage.component';
 import { OutilsComponent } from './outils/outils.component';
 import { ActualitesComponent } from './actualites/actualites.component';
+import { ContactComponent } from './contact/contact.component';
+import { SignaleFormComponent } from './signale-form/signale-form.component';
 
 export const routes: Routes = [
     {
@@ -18,7 +20,9 @@ export const routes: Routes = [
             { path: 'aut', component: AUTComponent, title: 'AUT' },
             { path: 'signalement-dopage', component: SignalementDopageComponent, title: 'Signalement Dopage' },
             { path: 'outils', component: OutilsComponent, title: 'Outils' },
-            { path: 'actualites', component: ActualitesComponent, title: 'Actualites' }
+            { path: 'actualites', component: ActualitesComponent, title: 'Actualites' },
+            { path: 'contact', component: ContactComponent, title: 'Contact' },
+            { path: 'signale-form', component: SignaleFormComponent, title: 'Signale Form' }
         ]
     }
 ];

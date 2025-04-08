@@ -1,10 +1,23 @@
-.actualites h2 {
+.actualites .title {
+    text-align: center;
     font-weight: 700;
     font-size: 64px;
     margin-bottom: 50px;
+    position: relative;
+}
+
+.actualites .title::after {
+    content: "";
+    width: 100px;
+    height: 8px;
+    background-color: #BDCE31;
+    position: absolute;
+    left: 50%;
+    top: 100%;
+    transform: translateX(-50%);
 }
 
 .actualites .box img {
     width: 400px;
-    height: 200px;
+    height: 300px;
 }

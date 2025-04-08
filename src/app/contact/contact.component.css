@@ -1,0 +1,47 @@
+.contact .image img {
+    width: 100%;
+    height: 100%;
+}
+
+.contact .frame {
+    width: 100%;
+    height: 100%;
+}
+
+.contact input:focus,
+.contact textarea:focus {
+    border-color: #BDCE31;
+}
+
+@media(max-width:992px) {
+    .frame {
+        width: 400px;
+        height: 500px;
+    }
+}
+
+.custom-accordion-button {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: bold;
+}
+
+.icon-container {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #BDCE31;
+    color: white;
+}
+
+.accordion-button.custom-accordion-button:not(.collapsed) {
+    background-color: rgba(189, 206, 49, 0.1);
+}
+
+.accordion-button::after {
+    display: none;
+}

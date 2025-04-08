@@ -95,6 +95,20 @@ ul {
     font-weight: 500;
 }
 
+.form-btn {
+    padding: 10px 20px;
+    border-radius: 30px;
+    background-color: #BDCE31;
+    font-weight: 500;
+    border: 1px solid transparent;
+    transition: 0.3s;
+}
+
+.form-btn:hover {
+    background: transparent;
+    border-color: #BDCE31;
+}
+
 .my-bg {
     background-color: #BDCE31;
 }
@@ -263,6 +277,10 @@ ul {
 @media(max-width:992px) {
     .section-image {
         flex-direction: column;
+    }
+
+    .reverse {
+        flex-direction: column-reverse;
     }
 
     .section-image .vr {
