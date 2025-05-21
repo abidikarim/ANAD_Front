@@ -9,11 +9,17 @@ import { OutilsComponent } from './outils/outils.component';
 import { ActualitesComponent } from './actualites/actualites.component';
 import { ContactComponent } from './contact/contact.component';
 import { SignaleFormComponent } from './signale-form/signale-form.component';
+import { LoginComponent } from './login/login.component';
+import { ForgetPasswordComponent } from './forget-password/forget-password.component';
+import { ResetPasswordComponent } from './reset-password/reset-password.component';
 
 export const routes: Routes = [
+    { path: '', redirectTo: 'home', pathMatch: 'full' },
+    {path:"login",component:LoginComponent,title:"Login"},
+    {path:"forget-password",component:ForgetPasswordComponent,title:"Forget Password"},
+    {path:"reset-password",component:ResetPasswordComponent,title:"Reset Password"},
     {
         path: '', component: LayoutComponent, children: [
-            { path: '', redirectTo: 'home', pathMatch: 'full' },
             { path: 'home', component: HomeComponent, title: 'Home' },
             { path: 'antidopage', component: AntidopageComponent, title: 'Antidopage' },
             { path: 'reglement', component: ReglementComponent, title: 'Reglement' },
