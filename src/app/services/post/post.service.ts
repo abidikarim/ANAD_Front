@@ -14,15 +14,11 @@ export class PostService {
   constructor(private http:HttpClient) { }
 
   getPosts(filter:Filter) {
-    const headers = new HttpHeaders({
-      "content-type":"application/json",
-      Authorization:"Bearer "+localStorage.getItem("token")
-    })
     let params = new HttpParams()
       .set("page_number",filter.page_number)
       .set("page_size",filter.page_size)
     if(filter.name_substr) params = params.set("name_substr",filter.name_substr)
-    return this.http.get<PagedResponse<Post>>(`${baseURL}post`,{params,headers})
+    return this.http.get<PagedResponse<Post>>(`${baseURL}post`,{params})
   }
   addPost(post_data:Post,image:File) {
     const headers = new HttpHeaders({

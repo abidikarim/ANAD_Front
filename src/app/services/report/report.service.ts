@@ -25,10 +25,6 @@ export class ReportService {
       return this.http.get<PagedResponse<Report>>(`${baseURL}report`,{params,headers})
   }
   addReport(data:Report) {
-    const headers = new HttpHeaders({
-      "content-type":"application/json",
-      Authorization:"Bearer "+localStorage.getItem("token")
-    })
-    return this.http.post<BaseResponse>(`${baseURL}report`,data,{headers})
+    return this.http.post<BaseResponse>(`${baseURL}report`,data)
   }
 }
