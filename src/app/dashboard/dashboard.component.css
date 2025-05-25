@@ -1,0 +1,44 @@
+/* Sidebar styles */
+.sidebar {
+  width: 200px;
+  background-color: #BDCE31;
+  color: white;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  padding-top: 1rem;
+  overflow-y: auto;
+}
+
+/* Menu item hover */
+.menu-link {
+  color: white;
+  border-radius: 4px;
+  padding: 8px;
+  transition: background-color 0.3s ease;
+}
+
+.menu-link:hover {
+  background-color: rgba(189, 206, 49, 0.1);
+  color: white;
+  text-decoration: none;
+}
+
+/* Header bar */
+.header-bar {
+  background-color: rgba(189, 206, 49, 0.1);
+  border-bottom: 1px solid #ccc;
+}
+
+/* Logout button */
+.logout-btn {
+  background-color: #BDCE31;
+  color: white;
+  border: none;
+}
+
+.logout-btn:hover {
+  background-color: #a9b926;
+  color: white;
+}

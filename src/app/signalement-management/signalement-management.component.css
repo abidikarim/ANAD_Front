@@ -1,0 +1,21 @@
+.signalement-container {
+  background-color: rgba(189, 206, 49, 0.1);
+  border-radius: 8px;
+}
+
+.table-header {
+  background-color: #BDCE31;
+  color: white;
+}
+
+.table th,
+.table td {
+  vertical-align: middle;
+}
+
+input.form-control {
+  max-width: 300px;
+}
+input:focus{
+    border-color: #BDCE31;
+}

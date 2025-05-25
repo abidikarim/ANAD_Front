@@ -7,32 +7,16 @@
     <div class="container">
         <div class="pt-100">
             <h2 class="title">Actualités</h2>
-            <div
-                class="d-flex flex-sm-column flex-md-row gap-4 flex-wrap justify-content-center align-items-center box">
-                <img src="/images/71acac5d0b7feb7190c3a44b0dccdcc3.jpg" alt="Image" class="img-fluid rounded">
-                <img src="/images/e1ab66664ebaf4d22d0f003d0f0172d4.jpg" alt="Image" class="img-fluid rounded">
-                <img src="/images/04a575c5338c5693180abdd092e10d3c.jpg" alt="Image" class="img-fluid rounded">
-                <img src="/images/0f9fecffb438e731850cae3a2ef254ef.jpg" alt="Image" class="img-fluid rounded">
-                <img src="/images/bb011c56d5c23d39bdc7854e732a15b3.jpg" alt="Image" class="img-fluid rounded">
-                <img src="/images/13c14c63236f75052472066339adad84.jpg" alt="Image" class="img-fluid rounded">
-                <img src="/images/ee8bc5fffd223e1d16da2562285d705c.jpg" alt="Image" class="img-fluid rounded">
-                <img src="/images/24fa55938edea0e09b294cca98e5f0d5.jpg" alt="Image" class="img-fluid rounded">
-                <img src="/images/61687b4c31543f27aaa3a9d0025bfd6d.jpg" alt="Image" class="img-fluid rounded">
-            </div>
-        </div>
-        <div class="pt-100">
-            <h2 class="title">Événements</h2>
-            <div
-                class="d-flex flex-sm-column flex-md-row gap-4 flex-wrap justify-content-center align-items-center box">
-                <img src="/images/71acac5d0b7feb7190c3a44b0dccdcc3.jpg" alt="Image" class="img-fluid rounded">
-                <img src="/images/e1ab66664ebaf4d22d0f003d0f0172d4.jpg" alt="Image" class="img-fluid rounded">
-                <img src="/images/04a575c5338c5693180abdd092e10d3c.jpg" alt="Image" class="img-fluid rounded">
-                <img src="/images/0f9fecffb438e731850cae3a2ef254ef.jpg" alt="Image" class="img-fluid rounded">
-                <img src="/images/bb011c56d5c23d39bdc7854e732a15b3.jpg" alt="Image" class="img-fluid rounded">
-                <img src="/images/13c14c63236f75052472066339adad84.jpg" alt="Image" class="img-fluid rounded">
-                <img src="/images/ee8bc5fffd223e1d16da2562285d705c.jpg" alt="Image" class="img-fluid rounded">
-                <img src="/images/24fa55938edea0e09b294cca98e5f0d5.jpg" alt="Image" class="img-fluid rounded">
-                <img src="/images/61687b4c31543f27aaa3a9d0025bfd6d.jpg" alt="Image" class="img-fluid rounded">
+            <div class="row g-4">
+                <div class="col-12 col-sm-6 col-md-4 col-lg-3" *ngFor="let item of posts">
+                    <div class="position-relative post-image-container">
+                        <img [src]="item.image_link" class="img-fluid post-image" alt="Post Image" />
+                        <div class="overlay p-3 text-white d-flex flex-column justify-content-center">
+                            <h5 class="mb-1">{{ item.title }}</h5>
+                            <p class="mb-0">{{ item.description }}</p>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>

@@ -1,36 +1,52 @@
 <div class="signale-form">
-    <div class="p-section bg-section">
-        <div class="page-title">
-            <h1>Formulaire de Signalement de Dopage</h1>
-        </div>
+  <div class="p-section bg-section">
+    <div class="page-title">
+      <h1>Formulaire de Signalement de Dopage</h1>
     </div>
-    <div class="container">
-        <div class="pt-100">
-            <form class="m-auto form">
-                <div class="d-flex gap-3 mb-3">
-                    <div class="w-100">
-                        <label for="nom" class="form-label">Nom</label>
-                        <input type="email" class="form-control bg-section shadow-sm" id="nom">
-                    </div>
-                    <div class="w-100">
-                        <label for="prenom" class="form-label">Prénom</label>
-                        <input type="text" class="form-control bg-section shadow-sm" id="prenom">
-                    </div>
-                </div>
-                <div class="mb-3">
-                    <label for="email" class="form-label">Adresse e-mail</label>
-                    <input type="email" class="form-control bg-section shadow-sm" id="email">
-                </div>
-                <div class="mb-3">
-                    <label for="phone" class="form-label">Numéro de téléphone</label>
-                    <input type="text" class="form-control bg-section shadow-sm" id="phone">
-                </div>
-                <div class="mb-4">
-                    <label for="desc" class="form-label">Description</label>
-                    <textarea class="form-control bg-section shadow-sm" style="height: 200px" id="desc"></textarea>
-                </div>
-                <button class="form-btn">Signaler </button>
-            </form>
+  </div>
+  <div class="container">
+    <div class="pt-100">
+      <form class="m-auto form" [formGroup]="form" (ngSubmit)="onsubmit()">
+        <div class="d-flex gap-3 mb-3">
+          <div class="w-100">
+            <label for="nom" class="form-label" style="color: #939597;">Nom</label>
+            <input type="text" class="form-control bg-section shadow-sm" id="nom" formControlName="first_name"/>
+            <div *ngIf="form.get('first_name')?.invalid && (form.get('first_name')?.dirty || form.get('first_name')?.touched)">
+              <small class="text-danger" *ngIf="form.get('first_name')?.errors?.['required']">Le nom est requis.</small>
+            </div>
+          </div>
+          <div class="w-100">
+            <label for="prenom" class="form-label" style="color: #939597;">Prénom</label>
+            <input type="text" class="form-control bg-section shadow-sm" id="prenom" formControlName="last_name"/>
+            <div *ngIf="form.get('last_name')?.invalid && (form.get('last_name')?.dirty || form.get('last_name')?.touched)">
+              <small class="text-danger" *ngIf="form.get('last_name')?.errors?.['required']">Le prénom est requis.</small>
+            </div>
+          </div>
         </div>
+        <div class="mb-3">
+          <label for="email" class="form-label" style="color: #939597;">Adresse e-mail</label>
+          <input type="email" class="form-control bg-section shadow-sm" id="email" formControlName="email"/>
+          <div *ngIf="form.get('email')?.invalid && (form.get('email')?.dirty || form.get('email')?.touched)">
+            <small class="text-danger" *ngIf="form.get('email')?.errors?.['required']">L'adresse e-mail est requise.</small>
+            <small class="text-danger" *ngIf="form.get('email')?.errors?.['email']">L'adresse e-mail n'est pas valide.</small>
+          </div>
+        </div>
+        <div class="mb-3">
+          <label for="phone" class="form-label" style="color: #939597;">Numéro de téléphone</label>
+          <input type="text" class="form-control bg-section shadow-sm" id="phone" formControlName="phone"/>
+          <div *ngIf="form.get('phone')?.invalid &&(form.get('phone')?.dirty || form.get('phone')?.touched)">
+            <small class="text-danger" *ngIf="form.get('phone')?.errors?.['required']">Le numéro de téléphone est requis.</small>
+          </div>
+        </div>
+        <div class="mb-4">
+          <label for="desc" class="form-label" style="color: #939597;">Description</label>
+          <textarea class="form-control bg-section shadow-sm" style="height: 200px" id="desc"formControlName="description"></textarea>
+          <div *ngIf="form.get('description')?.invalid &&(form.get('description')?.dirty || form.get('description')?.touched)">
+            <small class="text-danger" *ngIf="form.get('description')?.errors?.['required']">La description est requise.</small>
+          </div>
+        </div>
+        <button type="submit" class="form-btn">Signaler</button>
+      </form>
     </div>
+  </div>
 </div>

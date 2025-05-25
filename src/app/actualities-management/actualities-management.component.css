@@ -1,0 +1,44 @@
+.actualities-container {
+  background-color: rgba(189, 206, 49, 0.1);
+  border-radius: 8px;
+}
+
+.ajouter-btn {
+  background-color: #BDCE31;
+  color: white;
+  border: none;
+}
+
+.ajouter-btn:hover {
+  background-color: #a9b926;
+}
+
+.actuality-card {
+  border: 1px solid #BDCE31;
+  transition: transform 0.2s ease;
+}
+
+.actuality-card:hover {
+  transform: scale(1.03);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+input:focus {
+  border-color: #BDCE31;
+}
+
+.icon-btn {
+  background-color: #BDCE31;
+  color: white;
+  border: none;
+  transition: background-color 0.3s ease;
+}
+
+.icon-btn:hover {
+  background-color: #a9b926;
+  color: white;
+}
+
+.card img {
+  height: 250px;
+}

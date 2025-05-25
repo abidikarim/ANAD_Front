@@ -1,0 +1,59 @@
+<div class="profile-container p-4">
+  <h4 class="mb-4 text-dark">Profil Administrateur</h4>
+
+  <form [formGroup]="form">
+    <div class="mb-3">
+      <label class="form-label">Nom</label>
+      <input type="text" class="form-control shadow-sm" formControlName="first_name" placeholder="Entrez votre nom" />
+      <div
+        *ngIf="form.get('first_name')?.invalid && (form.get('first_name')?.dirty || form.get('first_name')?.touched)">
+        <small class="text-danger" *ngIf="form.get('first_name')?.errors?.['required']">Nom est requis.</small>
+      </div>
+    </div>
+    <div class="mb-3">
+      <label class="form-label">Prénom</label>
+      <input type="text" class="form-control shadow-sm" formControlName="last_name" placeholder="Entrez votre prénom" />
+      <div *ngIf="form.get('last_name')?.invalid && (form.get('last_name')?.dirty || form.get('last_name')?.touched)">
+        <small class="text-danger" *ngIf="form.get('last_name')?.errors?.['required']">Prénom est requis.</small>
+      </div>
+    </div>
+    <div class="mb-3">
+      <label class="form-label">Adresse Email</label>
+      <input type="email" class="form-control shadow-sm" formControlName="email" placeholder="Entrez votre email">
+      <div *ngIf="form.get('email')?.invalid && (form.get('email')?.dirty || form.get('email')?.touched)">
+        <small class="text-danger" *ngIf="form.get('email')?.errors?.['required']">L'adresse e-mail est requise.</small>
+        <small class="text-danger" *ngIf="form.get('email')?.errors?.['email']">L'adresse e-mail n'est pas
+          valide.</small>
+      </div>
+    </div>
+    <div class="mb-3">
+      <label for="password" class="form-label">Mot de passe</label>
+      <input type="password" class="form-control shadow-sm" id="password" placeholder="Entrez votre mot de passe"
+        formControlName="password" />
+      <div *ngIf="form.get('password')?.invalid && (form.get('password')?.dirty || form.get('password')?.touched)">
+        <small class="text-danger" *ngIf="form.get('password')?.errors?.['required']">Le mot de passe est
+          requis.</small>
+        <small class="text-danger" *ngIf="form.get('password')?.errors?.['minlength']">Le mot de passe doit contenir au
+          moins 8 caractères.</small>
+      </div>
+    </div>
+    <div class="mb-3">
+      <label for="confirm_password" class="form-label">Confirmez le mot de passe</label>
+      <input type="password" class="form-control shadow-sm" id="confirm_password"
+        placeholder="Confirmez votre mot de passe" formControlName="confirm_password" />
+      <div
+        *ngIf="form.get('confirm_password')?.invalid && (form.get('confirm_password')?.dirty || form.get('confirm_password')?.touched)">
+        <small class="text-danger" *ngIf="form.get('confirm_password')?.errors?.['required']">La confirmation est
+          requise.</small>
+      </div>
+      <div
+        *ngIf="form.errors?.['passwordMismatch'] && (form.get('confirm_password')?.dirty || form.get('confirm_password')?.touched)">
+        <small class="text-danger">Les mots de passe ne correspondent pas.</small>
+      </div>
+    </div>
+    <div class="text-center">
+      <p-button label="Mettre à jour" icon="pi pi-save" [loading]="loading" (onClick)="onSubmit()"
+        [style]="{'background-color': '#BDCE31','border':'none'}" />
+    </div>
+  </form>
+</div>

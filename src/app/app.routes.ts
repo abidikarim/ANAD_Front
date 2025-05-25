@@ -9,17 +9,28 @@ import { OutilsComponent } from './outils/outils.component';
 import { ActualitesComponent } from './actualites/actualites.component';
 import { ContactComponent } from './contact/contact.component';
 import { SignaleFormComponent } from './signale-form/signale-form.component';
-import { LoginComponent } from './login/login.component';
 import { ForgetPasswordComponent } from './forget-password/forget-password.component';
 import { ResetPasswordComponent } from './reset-password/reset-password.component';
+import { LoginComponent } from './login/login.component';
+import { ConfirmAccountComponent } from './confirm-account/confirm-account.component';
+import { DashboardComponent } from './dashboard/dashboard.component';
+import { ActualitiesManagementComponent } from './actualities-management/actualities-management.component';
+import { SignalementManagementComponent } from './signalement-management/signalement-management.component';
+import { AdminProfileComponent } from './admin-profile/admin-profile.component';
 
 export const routes: Routes = [
-    { path: '', redirectTo: 'home', pathMatch: 'full' },
-    {path:"login",component:LoginComponent,title:"Login"},
     {path:"forget-password",component:ForgetPasswordComponent,title:"Forget Password"},
     {path:"reset-password",component:ResetPasswordComponent,title:"Reset Password"},
+    {path:"login",component:LoginComponent,title:"Login"},
+    {path:"confirm-account",component:ConfirmAccountComponent,title:"Confirm Account"},
+    {path:"dashboard",component:DashboardComponent,title:"Dashboard",children:[
+        {path:"profile",component:AdminProfileComponent,title:"Profile"},
+        {path:"actualities",component:ActualitiesManagementComponent,title:"Actualities"},
+        {path:"signalement",component:SignalementManagementComponent,title:"Signalement"}
+    ]},
     {
         path: '', component: LayoutComponent, children: [
+            { path: '', redirectTo: 'home', pathMatch: 'full' },
             { path: 'home', component: HomeComponent, title: 'Home' },
             { path: 'antidopage', component: AntidopageComponent, title: 'Antidopage' },
             { path: 'reglement', component: ReglementComponent, title: 'Reglement' },

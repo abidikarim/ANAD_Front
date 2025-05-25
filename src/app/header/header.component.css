@@ -37,8 +37,12 @@ nav {
     padding: 10px;
     border-radius: 2px;
 }
-
+nav li {
+    display: flex;
+    align-items: center;
+}
 nav a {
+    text-align: center;
     font-weight: 500;
 }
 
@@ -46,8 +50,8 @@ nav a {
     nav {
         justify-content: center;
         top: 120px;
-        width: 80%;
-        left: 10%;
+        width: 90%;
+        left: 5%;
     }
 }
 

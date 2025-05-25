@@ -1,0 +1,11 @@
+.profile-container {
+  max-width: 600px;
+  margin: auto;
+  background-color: rgba(189, 206, 49, 0.1);
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.05);
+}
+
+input:focus{
+    border-color: #BDCE31;
+}
